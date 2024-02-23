@@ -1,13 +1,11 @@
 private HashMap<String, String> itemDetails;
 
-// Add item with details
 public void addItemWithDetails(String item, String details) {
     itemList.add(item);
     itemDetails.put(item, details);
     System.out.println(item + " with details '" + details + "' has been added to the list.");
 }
 
-// Display item details
 public void displayItemDetails(String item) {
     String details = itemDetails.get(item);
     if (details != null) {
