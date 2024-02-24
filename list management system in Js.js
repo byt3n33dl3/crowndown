@@ -1,72 +1,79 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-public class ListManagementSystem {
-    private ArrayList<String> itemList;
-
-    public ListManagementSystem() {
-        itemList = new ArrayList<>();
+class ListManagementSystem {
+    constructor() {
+        this.itemList = [];
     }
 
-    public void addItem(String item) {
-        itemList.add(item);
-        System.out.println(item + " has been added to the list.");
+    addItem(item) {
+        this.itemList.push(item);
+        console.log(`${item} has been added to the list.`);
     }
 
-    public void removeItem(String item) {
-        if (itemList.remove(item)) {
-            System.out.println(item + " has been removed from the list.");
+    removeItem(item) {
+        const index = this.itemList.indexOf(item);
+        if (index > -1) {
+            this.itemList.splice(index, 1);
+            console.log(`${item} has been removed from the list.`);
         } else {
-            System.out.println(item + " is not in the list.");
+            console.log(`${item} is not in the list.`);
         }
     }
 
-    public void displayList() {
-        if (itemList.isEmpty()) {
-            System.out.println("The list is empty.");
+    displayList() {
+        if (this.itemList.length === 0) {
+            console.log("The list is empty.");
         } else {
-            System.out.println("List items:");
-            for (String item : itemList) {
-                System.out.println("- " + item);
-            }
-        }
-    }
-
-    public static void main(String[] args) {
-        ListManagementSystem listManager = new ListManagementSystem();
-        Scanner scanner = new Scanner(System.in);
-
-        while (true) {
-            System.out.println("\nChoose an option:");
-            System.out.println("1. Add item");
-            System.out.println("2. Remove item");
-            System.out.println("3. Display list");
-            System.out.println("4. Exit");
-
-            int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume the newline character
-
-            switch (choice) {
-                case 1:
-                    System.out.println("Enter item to add:");
-                    String addItem = scanner.nextLine();
-                    listManager.addItem(addItem);
-                    break;
-                case 2:
-                    System.out.println("Enter item to remove:");
-                    String removeItem = scanner.nextLine();
-                    listManager.removeItem(removeItem);
-                    break;
-                case 3:
-                    listManager.displayList();
-                    break;
-                case 4:
-                    System.out.println("Exiting the List Management System. Goodbye!");
-                    scanner.close();
-                    System.exit(0);
-                default:
-                    System.out.println("Invalid choice. Please choose a valid option.");
-            }
+            console.log("List items:");
+            this.itemList.forEach(item => {
+                console.log(`- ${item}`);
+            });
         }
     }
 }
+
+const listManager = new ListManagementSystem();
+
+function main() {
+    function prompt() {
+        readline.question(`\nChoose an option:
+1. Add item
+2. Remove item
+3. Display list
+4. Exit
+`, (choice) => {
+            switch (choice) {
+                case '1':
+                    readline.question("Enter item to add: ", (addItem) => {
+                        listManager.addItem(addItem);
+                        prompt(); 
+                    });
+                    break;
+                case '2':
+                    readline.question("Enter item to remove: ", (removeItem) => {
+                        listManager.removeItem(removeItem);
+                        prompt(); 
+                    });
+                    break;
+                case '3':
+                    listManager.displayList();
+                    prompt(); 
+                    break;
+                case '4':
+                    console.log("Exiting the List Management System. Goodbye!");
+                    readline.close();
+                    process.exit(0);
+                default:
+                    console.log("Invalid choice. Please choose a valid option.");
+                    prompt(); 
+            }
+        });
+    }
+
+    prompt(); 
+}
+
+main();
