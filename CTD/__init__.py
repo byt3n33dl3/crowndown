@@ -22,11 +22,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from ghost.core.console import Console
+from CTD.core.console import Console
 
 
 def cli() -> None:
-    """ Ghost Framework command-line interface.
+    """ CTD Framework command-line interface.
 
     :return None: None
     """

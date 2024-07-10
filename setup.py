@@ -1,7 +1,7 @@
 """
 MIT License
 
-Copyright (c) 2020-2024 EntySec
+Copyright (c) 2020-2024 pxcs - EntySec
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,22 +24,22 @@ SOFTWARE.
 
 from setuptools import setup, find_packages
 
-setup(name='ghost',
+setup(name='CrownTouchDown',
       version='8.0.0',
       description=(
-          'Ghost Framework is an Android post-exploitation framework that exploits the'
-          ' Android Debug Bridge to remotely access an Android device.'
+          'CrownTouchDown is a exploitation framework for smartphone that exploits the'
+          ' android && iOS debug bridge to remotely access an smartphone.'
       ),
-      url='http://github.com/EntySec/Ghost',
-      author='EntySec',
-      author_email='entysec@gmail.com',
+      url='https://github.com/pxcs/CrownTouchDown',
+      author='pxcs',
+      author_email='pxmxx3csz@outlook.com',
       license='MIT',
       python_requires='>=3.7.0',
       packages=find_packages(),
       include_package_data=True,
       entry_points={
           "console_scripts": [
-              "ghost = ghost:cli"
+              "CrownTouchDown = CrownTouchDown:cli"
           ]
       },
       install_requires=[

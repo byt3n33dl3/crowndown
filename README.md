@@ -1,3 +1,0 @@
-# list-management-system-in-Java
-This program provides a simple text-based interface to interact with the list management system. Users can add items, remove items, display the current list, and exit the program. Having a list management system in programming, especially when using Java, offers numerous benefits. Java provides a robust set of classes and interfaces for managing lists within its Collections Framework.
-Integration with Streams API: With Java 8 and later, the Collections Framework integrates seamlessly with the Streams API, allowing for functional-style operations on collections, such as map-reduce transformations, filtering, and more complex data processing tasks.

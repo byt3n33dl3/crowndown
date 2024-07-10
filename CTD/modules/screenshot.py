@@ -1,14 +1,14 @@
 """
-This module requires Ghost: https://github.com/EntySec/Ghost
-Current source: https://github.com/EntySec/Ghost
+This module requires CTD: https://github.com/EntySec/CTD
+Current source: https://github.com/EntySec/CTD
 """
 
 import os
 
-from ghost.lib.module import Module
+from CTD.lib.module import Module
 
 
-class GhostModule(Module):
+class CTDModule(Module):
     def __init__(self):
         super().__init__()
 

@@ -27,14 +27,14 @@ import sys
 
 from badges import Badges, Tables
 
-from ghost.core.device import Device
+from CTD.core.device import Device
 
 
 class Console(cmd.Cmd):
-    """ Subclass of ghost.core module.
+    """ Subclass of CTD.core module.
 
-    This subclass of ghost.core modules is intended for providing
-    main Ghost Framework console interface.
+    This subclass of CTD.core modules is intended for providing
+    main CTD Framework console interface.
     """
 
     def __init__(self) -> None:
@@ -46,17 +46,17 @@ class Console(cmd.Cmd):
 
         self.devices = {}
         self.banner = """%clear%end
-   .--. .-.               .-.
-  : .--': :              .' `.
-  : : _ : `-.  .--.  .--.`. .'
-  : :; :: .. :' .; :`._-.': :
-  `.__.':_;:_;`.__.'`.__.':_;
-
---=[ %bold%whiteGhost Framework 8.0.0%end
---=[ Developed by EntySec (%linehttps://entysec.com/%end)
+__________________________       ______   ____________________  _______________  ___________________       ______   __
+__  ____/__  __ \_  __ \_ |     / /__  | / /__  __/_  __ \_  / / /_  ____/__  / / /__  __ \_  __ \_ |     / /__  | / /
+_  /    __  /_/ /  / / /_ | /| / /__   |/ /__  /  _  / / /  / / /_  /    __  /_/ /__  / / /  / / /_ | /| / /__   |/ / 
+/ /___  _  _, _// /_/ /__ |/ |/ / _  /|  / _  /   / /_/ // /_/ / / /___  _  __  / _  /_/ // /_/ /__ |/ |/ / _  /|  /  
+\____/  /_/ |_| \____/ ____/|__/  /_/ |_/  /_/    \____/ \____/  \____/  /_/ /_/  /_____/ \____/ ____/|__/  /_/ |_/   
+                                                                                                                      
+--=[ %bold%whiteCTD Framework 8.0.0%end
+--=[ Developed by pxcs (%linehttps://github.com/pxcs/CrownTouchDown/%end)
 """
 
-        self.prompt = '(ghost)> '
+        self.prompt = '(CTD)> '
 
     def do_help(self, _) -> None:
         """ Show available commands.
@@ -69,13 +69,13 @@ class Console(cmd.Cmd):
             ('connect', 'Connect device.'),
             ('devices', 'Show connected devices.'),
             ('disconnect', 'Disconnect device.'),
-            ('exit', 'Exit Ghost Framework.'),
+            ('exit', 'Exit CTD Framework.'),
             ('help', 'Show available commands.'),
             ('interact', 'Interact with device.')
         ])
 
     def do_exit(self, _) -> None:
-        """ Exit Ghost Framework.
+        """ Exit CTD Framework.
 
         :return None: None
         :raises EOFError: EOF error

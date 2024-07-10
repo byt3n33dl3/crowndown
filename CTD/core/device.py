@@ -32,15 +32,15 @@ from adb_shell.adb_device import AdbDeviceTcp
 from adb_shell.auth.keygen import keygen
 from adb_shell.auth.sign_pythonrsa import PythonRSASigner
 
-from ghost.core.loader import Loader
+from CTD.core.loader import Loader
 
 from pex.fs import FS
 
 
 class Device(cmd.Cmd):
-    """ Subclass of ghost.core module.
+    """ Subclass of CTD.core module.
 
-    This subclass of ghost.core module is intended for providing
+    This subclass of CTD.core module is intended for providing
     an implementation of device controller.
     """
 
@@ -72,7 +72,7 @@ class Device(cmd.Cmd):
         self.commands = {}
 
         self.prompt = ColorScript().parse_input(
-            f'%remove(ghost: %red{self.host}%end)> ')
+            f'%remove(CTD: %red{self.host}%end)> ')
 
     def get_keys(self) -> tuple:
         """ Get cryptographic keys.
