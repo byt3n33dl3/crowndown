@@ -26,8 +26,13 @@ C R O W N T O U C H D O W N
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⣄⠀⠀⠀⠀⠀⠀⢠⡥⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠈⠀⠒⠀⠊⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 
-remote access smartphone : bag-x-x-x
+v2 with love by : pxcs
+let's remote access smartphone
 
-credit to: EntySec/Ghost
+---------------------------------
 
+credit to:
+EntySec/Ghost
+
+Installation:
 pip3 install git+https://github.com/pxcs/CrownTouchDown
