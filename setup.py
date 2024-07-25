@@ -1,7 +1,7 @@
 """
 MIT License
 
-Copyright (c) 2020-2024 pxcs - EntySec
+Copyright (c) 2020-2024 CappaX ( Sulaiman ) - EntySec
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,22 +24,22 @@ SOFTWARE.
 
 from setuptools import setup, find_packages
 
-setup(name='CrownTouchDown',
-      version='8.0.0',
+setup(name='crowndown',
+      version='2.0.0',
       description=(
           'CrownTouchDown is a exploitation framework for smartphone that exploits the'
           ' android && iOS debug bridge to remotely access an smartphone.'
       ),
-      url='https://github.com/pxcs/CrownTouchDown',
+      url='https://github.com/pxcs/crowndown',
       author='pxcs',
       author_email='pxmxx3csz@outlook.com',
-      license='MIT',
-      python_requires='>=3.7.0',
+      license='MIT, OSL',
+      python_requires='>=3.9.0',
       packages=find_packages(),
       include_package_data=True,
       entry_points={
           "console_scripts": [
-              "CrownTouchDown = CrownTouchDown:cli"
+              "crowndown = crowndown:cli"
           ]
       },
       install_requires=[
