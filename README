@@ -1,4 +1,4 @@
-C R O W N T O U C H D O W N
+  C R O W N D O W N
 
 ⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀
 ⢠⠊⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠏⡄
@@ -24,4 +24,4 @@ credit to:
 EntySec/Ghost
 
 Installation:
-pip3 install git+https://github.com/pxcs/CrownTouchDown
+pip3 install git+https://github.com/pxcs/crowndown
